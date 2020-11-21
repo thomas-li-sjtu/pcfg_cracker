@@ -58,6 +58,8 @@ The default ruleset included in this repo was created by training on a 1 million
 ### Guess Generation
 This generates guesses to stdout using a previously training PCFG ruleset. These guesses can then be piped into any program that you want to make use of them. If no ruleset is specified, the default ruleset **DEFAULT** will be used. For the purposes of this guide it will assume the ruleset being used is **NEW_RULESET**. 
 
+If an output file is needed, just redirect stdout to the output file(e.g. sys.stdout = ("test.txt", "w") ) in pfcg_guesser.py
+
 1. Note: the guess generation program is case sensitive when specifying the ruleset name.
 -  A session name is not required, (it will by default create a session called **default_run**), but it is helpful to make restarting a paused/stopped session easier. These examples will use the session name **SESSION_NAME**. Note, there is no built in sanity check if you run multiple sessions with the same name at the same time, but it is recommend to avoid that.
 2. To start a new guessing session run:

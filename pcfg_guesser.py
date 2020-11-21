@@ -43,6 +43,8 @@ import sys
 if sys.version_info[0] < 3:
     print("This program requires Python 3.x", file=sys.stderr)
     sys.exit(1)
+# redirect stdout, or the output will be printed on the screen
+sys.stdout = open('test.txt', 'w')
 
 # Global imports    
 import argparse
